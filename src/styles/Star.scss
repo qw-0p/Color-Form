@@ -1,0 +1,30 @@
+@import 'globals';
+
+div.star {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 2px 10px;
+    float: left;
+    transition: 0.2s;
+    background-color: darken($light-grey, 40%);
+    clip-path: polygon(
+        50% 0%,
+        63% 38%,
+        100% 38%,
+        69% 59%,
+        82% 100%,
+        50% 75%,
+        18% 100%,
+        31% 59%,
+        0% 38%,
+        37% 38%
+    );
+    &:hover {
+        background-color: #ba0909;
+    }
+
+    &.selected {
+        background-color: red;
+    }
+}
