@@ -4,13 +4,13 @@ form.add-color {
     width: 100%;
     display: flex;
     justify-content: center;
-
     input,
     button {
         margin: 0.5em;
         padding: 0.25em;
         font-size: 1.2em;
         border-radius: 5px;
+        width: 100%;
     }
 
     input[type='color'] {

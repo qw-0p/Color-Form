@@ -21,10 +21,13 @@ div.star {
         37% 38%
     );
     &:hover {
-        background-color: #ba0909;
+        transform: scale(1.2);
     }
 
     &.selected {
         background-color: red;
+    }
+    &.selected:hover {
+        transform: none;
     }
 }

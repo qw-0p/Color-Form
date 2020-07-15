@@ -8,6 +8,7 @@ section.color {
     margin: 1em;
     padding: 0;
     flex-basis: 100%;
+
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -37,17 +38,13 @@ section.color {
 
     button {
         position: absolute;
-        top: 0.7em;
+        top: 0.5em;
         right: 0.5em;
         flex-basis: calc(12% - 1em);
         text-align: right;
-        cursor: pointer;
-        border: none;
-        font-size: 20px;
-        background-color: inherit;
-        &:hover {
-            color: #ba0909;
-        }
+        @include fade-bg($light, $light-grey);
+        padding: 0.75em;
+        border-radius: 0.5px;
     }
 
     > div:last-child {
