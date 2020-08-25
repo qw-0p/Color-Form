@@ -12,13 +12,12 @@ class Color extends Component {
         return rating !== nextProps.rating;
     }
     componentWillUpdate(nextProps) {
-        const {title, rating} = this.props;
         this.style = null;
         this.refs.title.style.backgroundColor = 'red';
         this.refs.title.style.color = 'white';
     }
     componentDidUpdate(prevProps) {
-        const {title, rating} = this.props;
+        const {rating} = this.props;
         const status = rating > prevProps.rating ? 'better' : 'worse';
         this.refs.title.style.backgroundColor = '';
         this.refs.title.style.color = 'black';
@@ -26,9 +25,9 @@ class Color extends Component {
     render() {
         const {title, rating, color, onRate} = this.props;
         return (
-            <section className="color" style={this.style}>
-                <h1 ref="title">{title}</h1>
-                <div className="color" style={{backgroundColor: color}}></div>
+            <section className='color' style={this.style}>
+                <h1 ref='title'>{title}</h1>
+                <div className='color' style={{backgroundColor: color}}></div>
 
                 <StarRating starsSelected={rating} onRate={onRate} />
             </section>
@@ -40,13 +39,13 @@ Color.propTypes = {
     color: PropTypes.string.isRequired,
     rating: PropTypes.number,
     onRemove: PropTypes.func,
-    onRate: PropTypes.func,
+    onRate: PropTypes.func
 };
 
 Color.defaultProps = {
     rating: 0,
     onRemove: (f) => f,
-    onRate: (f) => f,
+    onRate: (f) => f
 };
 
 export default Color;
